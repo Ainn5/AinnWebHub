@@ -108,28 +108,28 @@
     <section class="contact-section" id="business-contact">
       <h2>Want your business listed?</h2>
       <p>Send your business details to request an area-wise listing in our directories. Please provide a business phone number that customers may contact.</p>
-      <form class="contact-form" action="https://formsubmit.co/ainn.ra@gmail.com" method="POST">
+      <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwq4dz3wz5u4UwdjB41rLI10YOlZhWhCe-LRNTlfAuYyjFaBSzf-jCh7ncb-oPt2Twr/exec" method="POST">
         <input type="hidden" name="_subject" value="New business listing request - Ainn WebHub">
         <input type="hidden" name="_template" value="table">
         <div class="field">
           <label for="businessName">Business name *</label>
-          <input id="businessName" name="Business name" type="text" autocomplete="organization" required maxlength="120">
+          <input id="businessName" name="businessName" type="text" autocomplete="organization" required maxlength="120">
         </div>
         <div class="field">
           <label for="businessPhone">Business phone number *</label>
-          <input id="businessPhone" name="Business phone number" type="tel" autocomplete="tel" required maxlength="30">
+          <input id="businessPhone" name="phone" type="tel" autocomplete="tel" required maxlength="30">
         </div>
         <div class="field">
           <label for="businessArea">Area / locality in Bengaluru *</label>
-          <input id="businessArea" name="Area / locality" type="text" required maxlength="120" placeholder="e.g. HSR Layout">
+          <input id="businessArea" name="area" type="text" required maxlength="120" placeholder="e.g. HSR Layout">
         </div>
         <div class="field">
           <label for="businessCategory">Business category</label>
-          <input id="businessCategory" name="Business category" type="text" maxlength="100" placeholder="e.g. Salon, restaurant, gym">
+          <input id="businessCategory" name="category" type="text" maxlength="100" placeholder="e.g. Salon, restaurant, gym">
         </div>
         <div class="field full">
           <label for="businessDetails">Additional details (optional)</label>
-          <textarea id="businessDetails" name="Additional details" maxlength="1000" placeholder="Website, services, branch details, etc."></textarea>
+          <textarea id="businessDetails" name="details" maxlength="1000" placeholder="Website, services, branch details, etc."></textarea>
         </div>
         <p class="privacy-note">Your email address is not displayed on this page. Submitting this form sends the details to the site owner for review. Do not include sensitive personal information.</p>
         <button class="submit-btn" type="submit">Submit business details</button>
