@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Ainn's collection of useful shopping, food, vehicle care, gym and salon directories.">
+  <meta name="theme-color" content="#14213d">
+  <title>Ainn WebHub | Websites by Ainn</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#657087; --line:#e4e8f0; --brand:#2457d6; --bg:#f5f7fb; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+    header { background:linear-gradient(130deg,#14213d,#2457d6); color:white; padding:54px 20px 48px; text-align:center; }
+    .eyebrow { margin:0 0 8px; font-size:.82rem; letter-spacing:.14em; text-transform:uppercase; opacity:.85; }
+    h1 { margin:0; font-size:clamp(2rem,5vw,3.25rem); letter-spacing:-.04em; }
+    header p:last-child { margin:12px auto 0; max-width:650px; color:#e3eaff; }
+    main { width:min(1080px,calc(100% - 32px)); margin:32px auto 56px; }
+    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:20px; flex-wrap:wrap; }
+    .toolbar h2 { margin:0; font-size:1.25rem; }
+    .search { width:min(100%,320px); padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:white; font:inherit; color:var(--ink); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:18px; }
+    .site { display:flex; flex-direction:column; min-height:210px; padding:22px; background:white; border:1px solid var(--line); border-radius:18px; box-shadow:0 5px 18px #1827470a; transition:transform .18s ease,box-shadow .18s ease; }
+    .site:hover { transform:translateY(-3px); box-shadow:0 12px 28px #18274714; }
+    .tag { align-self:flex-start; padding:5px 10px; border-radius:999px; background:#edf2ff; color:#244db5; font-size:.75rem; font-weight:700; }
+    .site h3 { margin:14px 0 5px; font-size:1.18rem; }
+    .site p { margin:0 0 18px; color:var(--muted); font-size:.94rem; }
+    .visit { margin-top:auto; display:inline-flex; align-items:center; gap:7px; width:fit-content; color:var(--brand); font-weight:700; text-decoration:none; }
+    .visit:hover { text-decoration:underline; }
+    .empty { display:none; padding:24px; text-align:center; color:var(--muted); background:white; border-radius:14px; }
+    footer { padding:22px 16px; text-align:center; color:var(--muted); border-top:1px solid var(--line); font-size:.9rem; }
+    footer strong { color:var(--ink); }
+    a:focus-visible,input:focus-visible { outline:3px solid #8db2ff; outline-offset:3px; }
+    @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">A collection of useful directories</p>
+    <h1>Ainn WebHub</h1>
+    <p>Discover websites for shopping, dining, vehicle care, fitness and salons.</p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <h2>Explore websites</h2>
+      <input class="search" id="siteSearch" type="search" placeholder="Search websites…" aria-label="Search websites">
+    </div>
+    <section class="grid" id="siteGrid" aria-label="Website directory">
+      <article class="site" data-search="indiashops shopping online stores directory">
+        <span class="tag">Shopping</span><h3>IndiaShops</h3><p>A directory of shopping websites and stores.</p>
+        <a class="visit" href="https://ainn5.github.io/ShoppingDirectory/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="site" data-search="blrbites bangalore bites restaurants food pubs">
+        <span class="tag">Food &amp; dining</span><h3>BLRBites</h3><p>Explore restaurants, cafés and pubs in Bengaluru.</p>
+        <a class="visit" href="https://ainn5.github.io/BangaloreBites/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="site" data-search="carbikeclean car bike cleaning vehicle wash">
+        <span class="tag">Vehicle care</span><h3>CarBikeClean</h3><p>Find car and bike cleaning services.</p>
+        <a class="visit" href="https://ainn5.github.io/ShoppingDirectory/car-bike-cleaning/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="site" data-search="carbikerepair car bike repair roadside mechanic">
+        <span class="tag">Vehicle care</span><h3>CarBikeRepair</h3><p>Find car and bike repair and roadside assistance services.</p>
+        <a class="visit" href="https://ainn5.github.io/CarBikeRepair/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="site" data-search="blrgym bangalore gyms fitness workout">
+        <span class="tag">Fitness</span><h3>BLRGym</h3><p>Browse gyms and fitness centres across Bengaluru.</p>
+        <a class="visit" href="https://ainn5.github.io/BangaloreGyms/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="site" data-search="blrsaloons bangalore salons hair beauty men women">
+        <span class="tag">Beauty &amp; grooming</span><h3>BLRSaloons</h3><p>Discover salons offering grooming and beauty services.</p>
+        <a class="visit" href="https://ainn5.github.io/BLRSaloons/" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      </article>
+    </section>
+    <p class="empty" id="emptyState">No matching websites found.</p>
+  </main>
+  <footer>Page Owner: <strong>Ainn</strong></footer>
+  <script>
+    const search = document.getElementById('siteSearch');
+    const cards = [...document.querySelectorAll('.site')];
+    const empty = document.getElementById('emptyState');
+    search.addEventListener('input', () => {
+      const term = search.value.trim().toLowerCase();
+      let shown = 0;
+      cards.forEach(card => {
+        const match = (card.innerText + ' ' + card.dataset.search).toLowerCase().includes(term);
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
