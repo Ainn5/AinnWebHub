@@ -44,19 +44,7 @@
     .submit-btn { grid-column:1 / -1; border:0; border-radius:10px; padding:13px 18px; color:white; background:var(--brand); font:inherit; font-weight:bold; cursor:pointer; }
     .submit-btn:hover { background:#1b45b4; }
     .privacy-note { grid-column:1 / -1; margin:0; color:var(--muted); font-size:12px; }
-    .query-section { max-width:720px; margin:22px auto 0; text-align:center; }
-    .query-toggle { border:0; border-radius:10px; padding:13px 20px; color:#fff; background:var(--brand); font:inherit; font-weight:bold; cursor:pointer; }
-    .query-toggle:hover { background:#1b45b4; }
-    .query-panel { display:none; margin-top:16px; padding:24px; text-align:left; background:white; border:1px solid var(--line); border-radius:18px; box-shadow:0 5px 18px rgba(24,39,71,.05); }
-    .query-panel.open { display:block; }
-    .query-panel h2 { margin:0 0 8px; font-size:22px; }
-    .query-panel > p { margin:0 0 18px; color:var(--muted); }
-    .query-form { display:grid; gap:13px; }
-    .query-form label { font-size:14px; font-weight:bold; }
-    .query-form input,.query-form textarea { width:100%; margin-top:6px; padding:12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
-    .query-form textarea { min-height:120px; resize:vertical; }
-    .query-form button { border:0; border-radius:10px; padding:13px 18px; color:#fff; background:var(--brand); font:inherit; font-weight:bold; cursor:pointer; }
-    .query-form button:hover { background:#1b45b4; }
+
 
     footer { padding:22px 16px; text-align:center; color:var(--muted); border-top:1px solid var(--line); font-size:14px; }
     footer strong { color:var(--ink); }
@@ -132,26 +120,7 @@
     </section>
     <p class="empty" id="emptyState">No matching websites found.</p>
 
-    <section class="query-section" aria-label="Contact Ainn">
-      <button class="query-toggle" id="queryToggle" type="button" aria-expanded="false" aria-controls="queryPanel">Contact Ainn for Queries</button>
-      <div class="query-panel" id="queryPanel">
-        <h2>Send a message to Ainn</h2>
-        <p>Enter your details and query below. Your email address is not displayed on the website.</p>
-        <form class="query-form" action="https://script.google.com/macros/s/AKfycbzfEyfBRtdNnb4ioi79T2hlVohghVQukVKJB_J0XTVg4mhP-AZtXJEtL8O-jDxDAO82/exec" method="POST">
-          <input type="hidden" name="_subject" value="New query from Ainn WebHub">
-          <label for="queryName">Your name *
-            <input id="queryName" name="businessName" type="text" required maxlength="120" autocomplete="name">
-          </label>
-          <label for="queryEmail">Your email address *
-            <input id="queryEmail" name="phone" type="email" required maxlength="160" autocomplete="email">
-          </label>
-          <label for="queryMessage">Your message *
-            <textarea id="queryMessage" name="details" required maxlength="2000" placeholder="Type your query here..."></textarea>
-          </label>
-          <button type="submit">Submit Query</button>
-        </form>
-      </div>
-    </section>
+
 
     <section class="contact-section" id="business-contact">
       <h2>Want your business listed?</h2>
@@ -188,14 +157,6 @@
   <script data-goatcounter="https://ain.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   <script>
     (function () {
-      var queryToggle = document.getElementById('queryToggle');
-      var queryPanel = document.getElementById('queryPanel');
-      if (queryToggle && queryPanel) {
-        queryToggle.addEventListener('click', function () {
-          var isOpen = queryPanel.classList.toggle('open');
-          queryToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-      }
       var searchBox = document.getElementById('siteSearch');
       var cards = document.querySelectorAll('.site');
       var empty = document.getElementById('emptyState');
